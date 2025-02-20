@@ -1,0 +1,163 @@
+@font-face {
+  font-family: MuseoSlab;
+  src: url("../fonts/Museo_Slab_500.otf") format("opentype");
+}
+
+html {
+  background: url(../images/coffee-beans.jpg) no-repeat center center fixed;
+  background-size: cover;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  color: #5C4033;
+  background-color: transparent;
+  font-family: "MuseoSlab";
+  font-size: 16px;
+}
+
+ol, ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu {
+  margin-top: 1em;
+  margin-bottom: 1em;
+
+  section {
+    margin-top: 30px;
+  }
+
+  h2 {
+    font-family: "Lobster", cursive;
+    font-size: 1.75em;
+    margin: 0;
+  }
+
+  header {
+    text-align: center;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .menu-items {
+    padding: 1em;
+    background: white;
+
+    hr {
+      border-top: 3px dotted;
+    }
+
+    li {
+      white-space: nowrap;
+    }
+  }
+
+  .items {
+    display: flex;
+
+    .col {
+      flex: 1;
+    }
+  }
+
+  .size {
+    font-size: 1em;
+  }
+
+  .item,
+  .price {
+    margin: 0.5em 0;
+  }
+
+  .size,
+  .price {
+    text-align: center;
+  }
+
+  .small::after {
+    content: "S";
+  }
+
+  .medium::after {
+    content: "M";
+  }
+
+  .large::after {
+    content: "L";
+  }
+
+  .pastries .price {
+    text-align: right;
+  }
+}
+
+@media (min-width: 768px) {
+  .menu {
+    .items {
+      font-size: 1.25em;
+    }
+
+    .image {
+      position: relative;
+      height: 381px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+
+      .overlay {
+        position: absolute;
+        bottom: 0;
+        background: rgba(255,255,255,0.5);
+        width: 50%;
+        padding: 0.25em;
+      }
+    }
+
+    .logo {
+      height: 409px;
+      background-size: 40%;
+      background-image: url(../images/logo.png);
+    }
+
+    .croissant {
+      background-image: url(../images/croissant.jpg);
+    }
+
+    .cappuccino {
+      background-image: url(../images/cappuccino.jpg);
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .menu {
+    margin-top: 0;
+    margin-bottom: 30px;
+
+    .row:nth-of-type(1) {
+      position: absolute;
+      width: 100%;
+    }
+
+    .small::after {
+      content: "Small";
+    }
+
+    .medium::after {
+      content: "Medium";
+    }
+
+    .large::after {
+      content: "Large";
+    }
+  }
+}
